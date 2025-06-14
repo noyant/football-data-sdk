@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "football-data-sdk"
+version = "0.1.0"
+authors = [
+  { name="Noyan Toksoy", email="netnoyan@gmail.com" },
+]
+description = "A python based client / SDK to interact with the football-data.org API"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "requests",
+    "pydantic",
+    "python-dotenv",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "requests-mock",
+    "mypy"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/noyant/football-data-sdk"
+"Bug Tracker" = "https://github.com/noyant/football-data-sdk/issues"
